@@ -1,74 +1,38 @@
-# Yew Trunk Template
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is a fairly minimal template for a Yew app that's built with [Trunk].
+## Getting Started
 
-## Usage
-
-For a more thorough explanation of Trunk and its features, please head over to the [repository][trunk].
-
-### Installation
-
-If you don't already have it installed, it's time to install Rust: <https://www.rust-lang.org/tools/install>.
-The rest of this guide assumes a typical Rust installation which contains both `rustup` and Cargo.
-
-To compile Rust to WASM, we need to have the `wasm32-unknown-unknown` target installed.
-If you don't already have it, install it with the following command:
+First, run the development server:
 
 ```bash
-rustup target add wasm32-unknown-unknown
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-Now that we have our basics covered, it's time to install the star of the show: [Trunk].
-Simply run the following command to install it:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-cargo install trunk wasm-bindgen-cli
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-That's it, we're done!
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-### Running
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-```bash
-trunk serve
-```
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Rebuilds the app whenever a change is detected and runs a local server to host it.
+## Learn More
 
-There's also the `trunk watch` command which does the same thing but without hosting it.
+To learn more about Next.js, take a look at the following resources:
 
-### Release
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```bash
-trunk build --release
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-This builds the app in release mode similar to `cargo build --release`.
-You can also pass the `--release` flag to `trunk serve` if you need to get every last drop of performance.
+## Deploy on Vercel
 
-Unless overwritten, the output will be located in the `dist` directory.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Using this template
-
-There are a few things you have to adjust when adopting this template.
-
-### Remove example code
-
-The code in [src/main.rs](src/main.rs) specific to the example is limited to only the `view` method.
-There is, however, a fair bit of Sass in [index.scss](index.scss) you can remove.
-
-### Update metadata
-
-Update the `name`, `version`, `description` and `repository` fields in the [Cargo.toml](Cargo.toml) file.
-The [index.html](index.html) file also contains a `<title>` tag that needs updating.
-
-Finally, you should update this very `README` file to be about your app.
-
-### License
-
-The template ships with both the Apache and MIT license.
-If you don't want to have your app dual licensed, just remove one (or both) of the files and update the `license` field in `Cargo.toml`.
-
-There are two empty spaces in the MIT license you need to fill out: `` and `K-Kizuku <kotani.kizuku@gmail.com>`.
-
-[trunk]: https://github.com/thedodd/trunk
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
