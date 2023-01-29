@@ -4,7 +4,7 @@ import { IList, listData } from "@/data/listmock"
 const List = () => {
     return (
         <>
-            <div>投稿一覧</div>
+            <div className="text-3xl content-center">投稿一覧</div>
             {ListCard(listData)}
         </>
     )
